@@ -1,0 +1,20 @@
+* {
+  font-family: "skia", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+h1 {
+  font-size: 5em;
+  color: rgb(85, 150, 150);
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
