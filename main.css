@@ -1,10 +1,13 @@
 * {
   font-family: "skia", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -12,27 +15,54 @@ h1 {
   font-size: 5em;
   color: rgb(85, 150, 150);
   text-align: center;
+  margin-top: 5%;
 }
 img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-button {
+/* button {
   background-color: rgb(85, 150, 150);
   padding: 10px;
   font-size: 1em;
-  border-radius: 10%;
-  width: 5em;
+  width: auto;
+} */
+form {
+  display: flex;
+  flex-direction: row;
+}
+.add-button {
+  border: 0;
+  background-color: rgb(85, 150, 150);
+  min-height: 1.5em;
+  padding: 10px;
+  font-size: 1.5em;
 }
 input {
   height: 1.5em;
   padding: 10px;
   font-size: 1em;
-  border-color: rgb(191, 138, 101);
+  min-width: 20vw;
+  background-color: rgb(192, 208, 208);
+  border: none;
 }
+
 .task-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.todo-list-container {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  font-size: 1.5em;
+}
+#remove-button {
+  border: 0;
+  background-color: rgb(192, 208, 208);
+  padding: 10px;
+  font-size: 0.6em;
 }
