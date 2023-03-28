@@ -32,14 +32,14 @@ form {
   display: flex;
   flex-direction: row;
 }
-.add-button {
+#add-button {
   border: 0;
   background-color: rgb(85, 150, 150);
   min-height: 1.5em;
   padding: 10px;
   font-size: 1.5em;
 }
-input {
+#todo-input {
   height: 1.5em;
   padding: 10px;
   font-size: 1em;
@@ -53,16 +53,26 @@ input {
   flex-direction: column;
   align-items: center;
 }
-.todo-list-container {
+#todo-list-container {
   margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 0.5fr;
 }
-#remove-button {
+
+.finish-button {
   border: 0;
-  background-color: rgb(192, 208, 208);
+  min-width: 6em;
+  background-color: rgb(85, 150, 150);
   padding: 10px;
   font-size: 0.6em;
+}
+.remove-button {
+  border: 0;
+  background-color: rgb(218, 143, 73);
+  padding: 10px;
+  font-size: 0.6em;
+}
+.todo-item {
+  text-align: left;
+  font-size: 1.5em;
 }
