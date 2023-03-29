@@ -11,7 +11,7 @@
   margin-left: 10%;
   margin-right: 10%;
 }
-h1 {
+header {
   font-size: 5em;
   color: rgb(85, 150, 150);
   text-align: center;
@@ -28,7 +28,7 @@ img {
   font-size: 1em;
   width: auto;
 } */
-form {
+.inputcontainer {
   display: flex;
   flex-direction: row;
 }
@@ -56,12 +56,12 @@ form {
 #todo-list-container {
   margin-top: 8%;
   display: grid;
-  grid-template-columns: 3fr 0.5fr 0.5fr;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
 }
 
 .finish-button {
   border: 0;
-  min-width: 6em;
+
   background-color: rgb(85, 150, 150);
   padding: 10px;
   font-size: 0.6em;
