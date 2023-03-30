@@ -1,17 +1,16 @@
+// I learned coding from https://www.youtube.com/watch?v=-pRg_daFjfk
+
 let addToDoBTN = document.getElementById("add-button");
 let inputToDo = document.getElementById("todo-input");
 let todoContainer = document.getElementById("todo-list-container");
-let checkToDoBTN = document.querySelector(".finishBTN");
-let itemElement = document.querySelector(".todo-item");
 
 addToDoBTN.addEventListener("click", addToDo);
-checkToDoBTN.addEventListener("click", checkToDo);
 
 function addToDo() {
-  const toDoList = document.createElement("p");
-  toDoList.innerText = inputToDo.value;
-  toDoList.classList.add("todo-item");
-  todoContainer.appendChild(toDoList);
+  const toDoParagraph = document.createElement("p");
+  toDoParagraph.innerText = inputToDo.value;
+  toDoParagraph.classList.add("todo-item");
+  todoContainer.appendChild(toDoParagraph);
 
   const finishBTN = document.createElement("button");
   finishBTN.innerText = "✓";
@@ -22,8 +21,26 @@ function addToDo() {
   removeBTN.innerText = "−";
   removeBTN.classList.add("remove-button");
   todoContainer.appendChild(removeBTN);
+
+  inputToDo.value = "";
+
+  finishBTN.addEventListener("click", function () {
+    toDoParagraph.style.textDecoration = "line-through";
+  });
+
+  removeBTN.addEventListener("click", function () {
+    todoContainer.removeChild(toDoParagraph);
+    todoContainer.removeChild(finishBTN);
+    todoContainer.removeChild(removeBTN);
+  });
 }
 
-function checkToDo() {
-  itemElement.style.textDecoration = "line-through";
-}
+// function checkToDo() {
+//   const toDoParagraph = document.querySelector(".todo-item");
+//   toDoParagraph.style.textDecoration = "line-through";
+// }
+// function removeToDo() {
+//   todoContainer.removeChild(toDoParagraph);
+//   todoContainer.removeChild(finishBTN);
+//   todoContainer.removeChild(removeBTN);
+// }
