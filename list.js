@@ -55,5 +55,21 @@ function saveToDo() {
 function loadToDo() {
   if (localStorage.getItem("todoList")) {
     todoContainer.innerHTML = localStorage.getItem("todoList");
+
+    //The Element.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
+    const todoItems = document.querySelectorAll(".todo-item");
+    todoItems.forEach(function (item) {
+      const finishBTN = item.nextElementSibling;
+      const removeBTN = finishBTN.nextElementSibling;
+      finishBTN.addEventListener("click", function () {
+        item.style.textDecoration = "line-through";
+      });
+      removeBTN.addEventListener("click", function () {
+        todoContainer.removeChild(item);
+        todoContainer.removeChild(finishBTN);
+        todoContainer.removeChild(removeBTN);
+        saveToDo();
+      });
+    });
   }
 }
