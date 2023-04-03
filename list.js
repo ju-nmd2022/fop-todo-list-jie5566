@@ -24,7 +24,14 @@ function addToDo() {
 
   inputToDo.value = "";
 
-  finishBTN.addEventListener("click", function () {
+  finishBTN.addEventListener("click", function (event) {
+    //this are two ways to target the element I create in JS, not in the HTML
+    // console.log(event.currentTarget);
+
+    // finishBTN.addEventListener("click", (event) => {
+    //   console.log("Start the game!");
+    // });
+
     toDoParagraph.style.textDecoration = "line-through";
   });
 
@@ -33,14 +40,9 @@ function addToDo() {
     todoContainer.removeChild(finishBTN);
     todoContainer.removeChild(removeBTN);
   });
+
+  // localStorage.setItem("todoList", todoContainer.innerHTML);
+  //the method has some issues because the localstorage cannot store the whole function of addtodo, too much information.
 }
 
-// function checkToDo() {
-//   const toDoParagraph = document.querySelector(".todo-item");
-//   toDoParagraph.style.textDecoration = "line-through";
-// }
-// function removeToDo() {
-//   todoContainer.removeChild(toDoParagraph);
-//   todoContainer.removeChild(finishBTN);
-//   todoContainer.removeChild(removeBTN);
-// }
+// a storage function should be set
