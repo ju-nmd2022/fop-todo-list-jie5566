@@ -60,17 +60,18 @@ function loadToDo() {
     todoContainer.innerHTML = localStorage.getItem("todoList");
 
     //The Element.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
-    const todoItems = document.querySelectorAll(".todo-item");
-    todoItems.forEach(function (item) {
-      const finishBTN = item.nextElementSibling;
-      const removeBTN = finishBTN.nextElementSibling;
-      finishBTN.addEventListener("click", function () {
-        item.style.textDecoration = "line-through";
+    //item is used as a loop variable to iterate over all the todo items loaded from the localStorage.
+    const todoItemsSaved = document.querySelectorAll(".todo-item");
+    todoItemsSaved.forEach(function (itemSaved) {
+      const finishBTNSaved = itemSaved.nextElementSibling;
+      const removeBTNSaved = finishBTNSaved.nextElementSibling;
+      finishBTNSaved.addEventListener("click", function () {
+        itemSaved.style.textDecoration = "line-through";
       });
-      removeBTN.addEventListener("click", function () {
-        todoContainer.removeChild(item);
-        todoContainer.removeChild(finishBTN);
-        todoContainer.removeChild(removeBTN);
+      removeBTNSaved.addEventListener("click", function () {
+        todoContainer.removeChild(itemSaved);
+        todoContainer.removeChild(finishBTNSaved);
+        todoContainer.removeChild(removeBTNSaved);
         saveToDo();
       });
     });
