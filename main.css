@@ -1,0 +1,78 @@
+* {
+  font-family: "skia", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+header {
+  font-size: 5em;
+  color: rgb(85, 150, 150);
+  text-align: center;
+  margin-top: 5%;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* button {
+  background-color: rgb(85, 150, 150);
+  padding: 10px;
+  font-size: 1em;
+  width: auto;
+} */
+.inputcontainer {
+  display: flex;
+  flex-direction: row;
+}
+#add-button {
+  border: 0;
+  background-color: rgb(85, 150, 150);
+  min-height: 1.5em;
+  padding: 10px;
+  font-size: 1.5em;
+}
+#todo-input {
+  height: 1.5em;
+  padding: 10px;
+  font-size: 1em;
+  /* min-width: 20vw; */
+  background-color: rgb(192, 208, 208);
+  border: none;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#todo-list-container {
+  margin-top: 8%;
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  row-gap: 0.2em;
+}
+
+.finish-button {
+  border: 0;
+  background-color: rgb(85, 150, 150);
+  padding: 10px;
+  font-size: 0.6em;
+}
+.remove-button {
+  border: 0;
+  background-color: rgb(218, 143, 73);
+  padding: 10px;
+  font-size: 0.6em;
+}
+.todo-item {
+  text-align: left;
+  font-size: 1.5em;
+}
