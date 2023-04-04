@@ -51,6 +51,7 @@ function addToDo() {
   //the method has some issues because the localstorage cannot store the whole function of addtodo, too much information.
 }
 
+//the saveToDo() function saves the current state of the to-do list, which is represented as the innerHTML of the todoContainer element, to the local storage of the browser. This function is called from the addToDo() function every time a new to-do item is added, completed, or removed.
 function saveToDo() {
   localStorage.setItem("todoList", todoContainer.innerHTML);
 }
