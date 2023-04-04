@@ -37,12 +37,14 @@ function addToDo() {
       // });
 
       toDoParagraph.style.textDecoration = "line-through";
+      saveToDo();
     });
 
     removeBTN.addEventListener("click", function () {
       todoContainer.removeChild(toDoParagraph);
       todoContainer.removeChild(finishBTN);
       todoContainer.removeChild(removeBTN);
+      saveToDo();
     });
   }
 
